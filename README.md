@@ -2,7 +2,8 @@
 
 Projetos desenvolvidos durante o evento **[NLW #6 - Together](https://nextlevelweek.com/)** com as principais noções sobre a tecnologia.
 
-## Trilha Discover - [Projeto Rocket.Q](https://github.com/l4ur4oliveira/nlw-6-together/tree/main/discover)
+- ### Trilha Origin - [Projeto OriginSix](https://github.com/l4ur4oliveira/nlw-6-together/tree/main/origin)
+- ### Trilha Discover - [Projeto Rocket.Q](https://github.com/l4ur4oliveira/nlw-6-together/tree/main/discover)
 
 ## Tools
 
