@@ -15,6 +15,7 @@ header {
 #bg {
   grid-area: left;
   background: url('../assets/ilustracao.svg') no-repeat top/contain;
+  background-position: -8rem;
 }
 
 main {
@@ -22,10 +23,11 @@ main {
 
   display: flex;
   align-items: center;
+  margin-top: -10rem;
 }
 
 main .container {
-  width: min(36.3rem 100%);
+  width: min(36.3rem, 100%);
 }
 
 main h2 {
@@ -43,4 +45,45 @@ input {
 input, button, .button {
   width: 100%;
   margin-bottom: 1.8rem;
+}
+
+.separator {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.35rem;
+  margin: 4rem 0;
+
+  font-family: var(--poppins);
+  font-weight: 400;
+  color: var(--gray-blue);
+}
+
+.separator div:nth-child(1),
+.separator div:nth-child(3) {
+  background: var(--gray-blue);
+  width: 100%;
+  height: .1rem;
+}
+
+.ball {
+  position: fixed;
+  width: 21.2rem;
+  height: 21.2rem;
+
+  background: var(--blue);
+  opacity: .2;
+  clip-path: circle();
+}
+
+.ball.top {
+  width: 63.3rem;
+  height: 63.3rem;
+  top: -45rem;
+  right: -38rem;
+}
+
+.ball.bottom {
+  bottom: -15rem;
+  right: 6rem;
 }
