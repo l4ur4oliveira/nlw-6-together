@@ -1,0 +1,58 @@
+.modal-wraper {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  display: flex;
+  /* align-items: center;
+  justify-content: center; */
+
+  background: rgba(4, 9, 17, .8);
+}
+
+.modal-wraper .modal {
+  width: min(59rem, 90%);
+  margin: auto;
+  padding: 6.4rem;
+
+  background: white;
+  border-radius: .8rem;
+
+  font-family: var(--poppins);
+  text-align: center;
+}
+
+.modal-wraper .modal h2 {
+  margin-bottom: 1.2rem;
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: var(--black);
+}
+
+.modal-wraper .modal p {
+  margin-bottom: 2.4rem;
+  color: var(--black);
+}
+
+.modal-wraper .modal input {
+  width: min(30rem, 90%);
+  margin-bottom: 4rem;
+  padding: 1.3rem 1.6rem;
+  font-size: 1.6rem;
+  border: .2rem solid var(--blue);
+  outline: none;
+}
+
+.modal-wraper .modal .buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: .8rem;
+}
+
+.modal-wraper .modal .buttons button,
+.modal-wraper .modal .buttons .button {
+  padding: 1.3rem 3.2rem;
+}
