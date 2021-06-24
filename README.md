@@ -9,3 +9,4 @@ Projetos desenvolvidos durante o evento **[NLW #6 - Together](https://nextlevelw
 
 - Visual Studio Code
 - Google Chrome
+- Figma
