@@ -134,6 +134,10 @@ main {
   color: var(--base-color);
 }
 
+.logo-alt span {
+  color: var(--text-color-light);
+}
+
 /* MENU --------------------------- */
 nav {
   width: 100%;
@@ -427,4 +431,65 @@ nav.show .icon-close {
   margin-right: .75rem;
   font-size: 1.5rem;
   color: var(--base-color);
+}
+
+/* Footer ------------------------------ */
+footer {
+  background: var(--base-color);
+}
+
+footer .logo {
+  display: inline-block;
+  margin-bottom: 1.5rem;
+}
+
+footer .brand p {
+  color: var(--text-color-light);
+  margin-bottom: .75rem;
+}
+
+footer .social a {
+  display: inline-block;
+  transition: 0.2s;
+}
+
+footer .social a:hover {
+  transform: translateY(-.5rem);
+}
+
+footer .social a + a {
+  margin-left: 2rem;
+}
+
+footer .social i {
+  font-size: 1.5rem;
+  color: var(--text-color-light);
+}
+
+/* Back to top --------------------------------- */
+.back-to-top {
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+
+  background: var(--base-color);
+  font-size: 1.5rem;
+  color: var(--text-color-light);
+  line-height: 0;
+
+  padding: .5rem;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+
+  visibility: hidden;
+  opacity: 0;
+
+  transition: 0.3s;
+  transform: translateY(100%);
+}
+
+.back-to-top.show {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
 }
