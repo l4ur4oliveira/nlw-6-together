@@ -18,14 +18,23 @@ deleteButtons.forEach(button => {
 
 function handleClick(event, check = true) {
   event.preventDefault();
-  
+
+  // Customize modal texts
   const text = check ? 'Marcar como lida' : 'Excluir';
+  const slug = check ? 'check' : 'delete';
 
   modalTitle.innerHTML = `${text} esta pergunta`;
   modalDescription.innerHTML = `Tem certeza que você deseja ${text.toLowerCase()}?`;
   modalButton.innerHTML = `Sim, ${text.toLowerCase()}`;
 
   check ? modalButton.classList.remove('red') : modalButton.classList.add('red');
+
+  // Set form action
+  const form = document.querySelector('.modal form');
+  const roomId = document.querySelector('#room-id').dataset.id;
+  const questionId = event.target.dataset.id;
+
+  form.setAttribute('action', `/question/${roomId}/${questionId}/${slug}`);
 
   modal.open();
 }
