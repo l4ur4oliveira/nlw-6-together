@@ -17,11 +17,13 @@ module.exports = {
         await db.run(`UPDATE questions SET read = 1 WHERE id = ${question}`);
 
       }
+
+      await db.close();
+
+      res.redirect(`/room/${room}`);
+    } else {
+      res.render('unauthorized', { roomId: room });
     }
-
-    await db.close();
-
-    res.redirect(`/room/${room}`);
   },
   async create(req, res) {
     const db = await Database();

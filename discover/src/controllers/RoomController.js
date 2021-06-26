@@ -2,11 +2,6 @@ const { open } = require('sqlite');
 const Database = require('../db/config');
 
 module.exports = {
-  enter(req, res) {
-    const { roomId } = req.body;
-
-    res.redirect(`/room/${roomId}`);
-  },
   async create(req, res) {
     const db = await Database();
     const { password } = req.body;
@@ -40,9 +35,19 @@ module.exports = {
     const db = await Database();
     const roomId = req.params.id;
 
-    const questions = await db.all(`SELECT * FROM questions WHERE room = ${roomId} AND read = 0`)
-    const questionsRead = await db.all(`SELECT * FROM questions WHERE room = ${roomId} AND read = 1`)
+    const questions = await db.all(`SELECT * FROM questions WHERE room = ${roomId} AND read = 0`);
+    const questionsRead = await db.all(`SELECT * FROM questions WHERE room = ${roomId} AND read = 1`);
+    let noQuestions = false;
 
-    res.render('room', { roomId, questions, questionsRead });
+    if (questions.length === 0 && questionsRead.length === 0) {
+      noQuestions = true;
+    }
+
+    res.render('room', { roomId, questions, questionsRead, noQuestions });
+  },
+  enter(req, res) {
+    const { roomId } = req.body;
+
+    res.redirect(`/room/${roomId}`);
   }
 }

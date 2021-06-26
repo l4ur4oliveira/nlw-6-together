@@ -129,3 +129,21 @@
 .question-wraper.read .question-content .user {
   background: var(--gray-blue);
 }
+
+.no-questions {
+  width: 28rem;
+  margin: 5.2rem auto;
+  text-align: center;
+}
+
+.no-questions p:nth-child(2) {
+  margin: 1.3rem 0;
+  font: 700 1.8rem var(--poppins);
+  color: var(--black);
+}
+
+.no-questions p:nth-child(3) {
+  font-size: 1.4rem;
+  color: var(--gray-blue);
+  line-height: 2.2rem;
+}

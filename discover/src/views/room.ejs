@@ -52,6 +52,10 @@
         <h2 class="sr-only">Perguntas da comunidade</h2>
         <div class="questions">
 
+          <% if (noQuestions) { %>
+            <%- include('parts/no-questions') %>
+          <% } %>
+
           <% questions.forEach(question => { %>
             <div class="question-wraper">
               <div class="question-content">
