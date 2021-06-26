@@ -5,5 +5,5 @@ Aplicação de gerenciamento de perguntas e respostas, com criação de salas pa
 ## Run
 
 - Instalar dependências `yarn install`
-- Criar bando de dados `yarn init-db`
+- Criar banco de dados `yarn init-db`
 - Rodar o server `yarn start`

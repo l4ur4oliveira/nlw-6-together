@@ -6,9 +6,12 @@ const route = express.Router();
 
 route.get('/', (req, res) => res.render('index', { page: 'enter-room' }));
 route.get('/create-room', (req, res) => res.render('index', { page: 'create-room' }));
-route.get('/room/:id', (req, res) => res.render('room'));
 
-route.post('/question/:room/:question/:action', QuestionController.index);
 route.post('/create-room', RoomController.create);
+route.get('/room/:id', RoomController.open);
+route.post('/enter-room', RoomController.enter);
+
+route.post('/question/create/:room', QuestionController.create);
+route.post('/question/:room/:question/:action', QuestionController.index);
 
 module.exports = route;
