@@ -22,7 +22,7 @@ module.exports = {
 
       res.redirect(`/room/${room}`);
     } else {
-      res.render('unauthorized', { roomId: room });
+      res.render('unauthorized', { message: 'Senha incorreta', location: `/room/${room}` });
     }
   },
   async create(req, res) {

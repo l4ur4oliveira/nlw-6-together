@@ -3,8 +3,8 @@
 <head>
   <title>Senha incorreta</title>
   <script>
-    confirm('Senha incorreta');
-    window.location.replace('/room/<%= roomId %>');
+    confirm('<%= message %>');
+    window.location.replace('<%= location %>');
   </script>
 </head>
 </html>

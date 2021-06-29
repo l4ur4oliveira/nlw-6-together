@@ -45,9 +45,17 @@ module.exports = {
 
     res.render('room', { roomId, questions, questionsRead, noQuestions });
   },
-  enter(req, res) {
+  async enter(req, res) {
+    const db = await Database();
     const { roomId } = req.body;
 
-    res.redirect(`/room/${roomId}`);
+    const room = await db.all(`SELECT * FROM rooms WHERE id = ${roomId}`);
+
+    if(room.length !== 0) {
+      // 491557
+      res.redirect(`/room/${roomId}`);
+    } else {
+      res.render('unauthorized', { message: 'Sala não existe', location: `/` });
+    }
   }
 }
